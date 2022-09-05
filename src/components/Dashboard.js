@@ -2,7 +2,6 @@ import React from 'react';
 import "../index.css"
 import {Link, Outlet} from "react-router-dom"
 import {Container, Row, Col, ListGroup} from "react-bootstrap"
-import Profile from "./Profile" 
 import OffCanvasExample from "./RightSidebar"
 
 export default function Dashboard() {

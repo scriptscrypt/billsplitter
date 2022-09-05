@@ -94,7 +94,7 @@ const getRazorPay = async (amount) =>{
           return;
         }
 const options = {
-      key: "rzp_test_6zNEPlfhRWYbkh",
+      key: process.env.REACT_APP_RAZORPAY_KEY_ID,
       currency: "INR",
       amount: amount * 100,
       name: "Bill splitter",
