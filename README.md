@@ -1,5 +1,5 @@
 # BillSplitter
-This is the source code for [BillSplitter](htttps://splits.web.app)
+This is the source code for [billsplitter](htttps://splits.web.app)
 
 ## Description
 
@@ -17,4 +17,4 @@ This is a web application built to organize, manage and split bills
 
 1. User authentication with password protection <br/>
 2. Data analytics <br/>
-3. Clean user interface <br/> 
+3. Clean user interface <br/>   
