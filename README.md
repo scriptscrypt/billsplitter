@@ -16,5 +16,6 @@ This is a web application built to organize, manage and split bills
 ### Features
 
 1. User authentication with password protection <br/>
-2. Data analytics <br/>
-3. Clean user interface <br/>   
+2. Payment gateway integration <br/>
+3. Data analytics <br/>
+3. Clean user interface <br/> 
