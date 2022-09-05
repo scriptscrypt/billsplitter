@@ -7,11 +7,11 @@ import { getAuth } from "firebase/auth";
 export default function SplitBill() {
 
     const [visibility, setVisibility] = useState("visible")
-    const userEmail = useRef('');
+    const userEmail = useRef("");
     const userId = useRef("");
     const amount = useRef(0)
     const people = useRef(0)
-    const [perPerson, setPerPerson] = useState(0);
+    const perPerson = useRef(0)
   //Initializing and creating name and email instances  
     const p1Name = useRef(''); const p2Name = useRef('');  const p3Name = useRef('');
     const p4Name = useRef(''); const p5Name = useRef('');
@@ -23,8 +23,8 @@ export default function SplitBill() {
     function handleSubmit(e){
         e.preventDefault();
         setVisibility("invisible")
-        setPerPerson(amount.current.value / people.current.value)
-        console.log(perPerson)
+        perPerson.current = amount.current.value / people.current.value
+        console.log(perPerson.current)
         addToDb();
     }
       async function addToDb(){
@@ -42,6 +42,7 @@ export default function SplitBill() {
               userEmail.current = docData.data().email;
             }
           else {
+              setVisibility("visible")
               alert("No data found with username")
           }}).catch((error) => {
               // The write failed...
@@ -59,11 +60,11 @@ export default function SplitBill() {
               group: { name:gName.current.value,    
               people: people.current.value, 
               totAmount: amount.current.value,  
-              p1:{name:p1Name.current.value, email: p1Email.current.value, pendingAmt: perPerson, paid: "no"},         
-              p2:{name:p2Name.current.value, email: p2Email.current.value, pendingAmt: perPerson, paid: "no"},         
-              p3:{name:p3Name.current.value, email: p3Email.current.value, pendingAmt: perPerson, paid: "no"},         
-              p4:{name:p4Name.current.value, email: p4Email.current.value, pendingAmt: perPerson, paid: "no"},         
-              p5:{name:p5Name.current.value, email: p5Email.current.value, pendingAmt: perPerson, paid: "no"},
+              p1:{name:p1Name.current.value, email: p1Email.current.value, pendingAmt: perPerson.current, paid: "no"},         
+              p2:{name:p2Name.current.value, email: p2Email.current.value, pendingAmt: perPerson.current, paid: "no"},         
+              p3:{name:p3Name.current.value, email: p3Email.current.value, pendingAmt: perPerson.current, paid: "no"},         
+              p4:{name:p4Name.current.value, email: p4Email.current.value, pendingAmt: perPerson.current, paid: "no"},         
+              p5:{name:p5Name.current.value, email: p5Email.current.value, pendingAmt: perPerson.current, paid: "no"},
           },
           created: new Date(),
       }).then(()=>{
@@ -86,7 +87,7 @@ export default function SplitBill() {
       group:{ 
       name: gName.current.value,
       toUserEmail: userEmail.current,
-      toAmt: perPerson,
+      toAmt: perPerson.current,
       created: new Date(),
       }
       })

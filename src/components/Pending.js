@@ -117,7 +117,7 @@ const options = {
   return (
     <>
      <Alert className='mt-4 w-100'>YET TO PAY</Alert>  
-      <Button onClick={getData} className="w-100 mt-2">Pending Transactions</Button>
+      <Button onClick={getData} className="w-100 mt-2">Pending Transactions</Button> <br/>
         {loading && <Spinner className='mt-4' animation="grow"/>}
     <ListGroup className={visibility}> 
             {payError && <Alert>{payError}</Alert>}
