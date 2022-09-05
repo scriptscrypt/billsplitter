@@ -10,7 +10,7 @@ export default function Dashboard() {
     <Container>
       <Row>
         <Col>
-            <ListGroup className="w">
+            <ListGroup className="">
             <ListGroup.Item variant="dark" className="mt-4">Dashboard</ListGroup.Item>
             <ListGroup.Item variant="light" className=""><Link className="a" to="send">Create</Link></ListGroup.Item>
             <ListGroup.Item variant="light" className=""><Link className="a"  to="receive">Pending</Link></ListGroup.Item> 

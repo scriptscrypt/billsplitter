@@ -1,14 +1,24 @@
-.a{
+.a, .aHome{
     text-decoration: none;
 }
-
-
-
-@media(max-width:512px){
-
-.sticky-profile{
-    position:sticky !important;
-    bottom:8px;
-    left:8px;
+.a:hover{
+    color:#000;
 }
+.aHome{
+    color: #000;
+}
+.aHome:hover {
+   color: #000;
+}
+.h100{
+    height:100vh !important;
+}
+.f1{
+    font-size: 72px;
+}
+.f2{
+    font-size: 24px;
+}
+.w{
+    width: 104px;
 }

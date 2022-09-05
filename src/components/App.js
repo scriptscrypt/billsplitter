@@ -13,6 +13,7 @@ import UpdateProfile from "./UpdateProfile";
 import Profile from "./Profile";
 import Groups from "./Groups";
 import Analytics from "./Analytics";
+import Landing from "./Landing";
 
 function App() {
   return (
@@ -23,12 +24,13 @@ function App() {
 
             <AuthProvider>
                   <Routes>
-                    <Route path="/" element={<PrivateRoute> <Dashboard /> </PrivateRoute>}>
-                        <Route path="/send" element={<PrivateRoute> <Send /> </PrivateRoute>}></Route>
-                        <Route path="/receive" element={<PrivateRoute> <Receive /> </PrivateRoute>}></Route>
-                        <Route path="/groups" element={<PrivateRoute> <Groups /> </PrivateRoute>}></Route>
-                        <Route path="/analytics" element={<PrivateRoute> <Analytics /> </PrivateRoute>}></Route>
-                    </Route>
+                    <Route path="/" element={<Landing />}/>
+                        <Route path="/dashboard" element={<PrivateRoute> <Dashboard /> </PrivateRoute>}>
+                        <Route path="/dashboard/send" element={<PrivateRoute> <Send /> </PrivateRoute>}></Route>
+                        <Route path="/dashboard/receive" element={<PrivateRoute> <Receive /> </PrivateRoute>}></Route>
+                        <Route path="/dashboard/groups" element={<PrivateRoute> <Groups /> </PrivateRoute>}></Route>
+                        <Route path="/dashboard/analytics" element={<PrivateRoute> <Analytics /> </PrivateRoute>}></Route>
+                    </Route>  
                     <Route path="/profile" element={<PrivateRoute> <Profile /> </PrivateRoute>}></Route>
                     <Route path="/updateProfile" element={<PrivateRoute> <UpdateProfile /> </PrivateRoute>}></Route>
                     <Route path="/signup" element={<Signup/>}/>

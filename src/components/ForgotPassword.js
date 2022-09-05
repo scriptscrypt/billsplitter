@@ -34,7 +34,7 @@ function ForgotPassword(){
 
   return (
     <>
-    <Container className="d-flex flex-column align-items-center justify-content-center mt-4">  
+    <Container className="d-flex flex-column align-items-center justify-content-center h100">  
     
       <Card>
         <Card.Body>

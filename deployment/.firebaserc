@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "auth-development-e8d67"
+  },
+  "targets": {
+    "auth-development-e8d67": {
+      "hosting": {
+        "xyz": [
+          "splits.web.app"
+        ],
+        "s": [
+          "splits"
+        ]
+      }
+    }
   }
 }
