@@ -1,5 +1,5 @@
 # BillSplitter
-This is the source code for [billsplitter](htttps://splits.web.app)
+This is the source code for [billsplitter](https://splits.web.app/)
 
 ## Description
 
